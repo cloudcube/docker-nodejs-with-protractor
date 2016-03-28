@@ -10,10 +10,10 @@ RUN \
 
 # install dependence software
 RUN \
-  apt-get install python-software-properties && \
-  add-apt-repository ppa:webupd8team/java && \
+  echo oracle-java8-installer shared/accepted-oracle-license-v1-1 select true | debconf-set-selections && \
+  add-apt-repository -y ppa:webupd8team/java && \
   apt-get update && \
-  apt-get install oracle-java8-installer \
+  apt-get install -y oracle-java8-installer \
   xfvb \
   libgconf-2-4 \
   libexif12 \
