@@ -3,7 +3,7 @@ MAINTAINER "zhaohaibin@outlook.com"
 
 # ffmpeg is hosted at deb-multimedia.org
 RUN \
-  curl http://www.deb-multimedia.org/pool/main/d/deb-multimedia-keyring/deb-multimedia-keyring_2015.6.1_all.deb -o /tmp/deb-multimedia-keyring_2015.6.1_all.deb && \
+  curl https://www.deb-multimedia.org/pool/main/d/deb-multimedia-keyring/deb-multimedia-keyring_2016.3.7_all.deb -o /tmp/deb-multimedia-keyring_2015.6.1_all.deb && \
   dpkg -i /tmp/deb-multimedia-keyring_2015.6.1_all.deb && \
   rm /tmp/deb-multimedia-keyring_2015.6.1_all.deb && \
   echo "deb http://www.deb-multimedia.org stretch main non-free" >> /etc/apt/sources.list
