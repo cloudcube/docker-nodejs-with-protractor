@@ -19,7 +19,7 @@ RUN \
   xfvb \
   libgconf-2-4 \
   libexif12 \
-  chromium \
+  chromium-bsu \
   netcat-traditional \
   curl \
   ffmpeg && \
