@@ -16,13 +16,13 @@ RUN \
   apt-get update
 RUN \
   apt-get install -y oracle-java8-installer \
+  libav-tools \
   xvfb \
   libgconf-2-4 \
   libexif12 \
   chromium-bsu \
   netcat-traditional \
-  curl \
-  ffmpeg && \
+  curl && \
   apt-get clean && \
   rm -rf /var/lib/apt/lists/*
 # install protractor
