@@ -8,6 +8,7 @@ ENV DEBCONF_NONINTERACTIVE_SEEN true
 
 # prepare java && firefox source file
 RUN \
+  apt-get update && \
   apt-get install -y -q software-properties-common \
   wget \
   curl && \
@@ -20,7 +21,7 @@ RUN \
   curl https://www.deb-multimedia.org/pool/main/d/deb-multimedia-keyring/deb-multimedia-keyring_2016.3.7_all.deb -o /tmp/deb-multimedia-keyring_2015.6.1_all.deb && \
   dpkg -i /tmp/deb-multimedia-keyring_2015.6.1_all.deb && \
   rm /tmp/deb-multimedia-keyring_2015.6.1_all.deb && \
-  echo "deb http://www.deb-multimedia.org stretch main non-free" >> /etc/apt/sources.list
+  echo "deb http://www.deb-multimedia.org stretch main non-free" >> /etc/apt/sources.list.d/multimedia.list
 
 # prepare google source file
 RUN \
